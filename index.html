@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./asset/css/main.css">
+  <link rel="stylesheet" href="./asset/css/base.css">
+  <link rel="stylesheet" href="./asset/css/reposition.css">
+  <link rel="stylesheet" href="./asset/css/grid.css">
+  <link rel="stylesheet" href="./asset/css/themify-icons.css">
+  <link rel="stylesheet" href="./asset/themify-icons/themify-icons.css">
+  <!-- main font -->
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Spartan:wght@500;700&display=swap" rel="stylesheet">
+
+<body>
+  <div class="app grid wide">
+    <header class="row header-bar">
+      <div class="header-bar__menu--mobile col l-0 m-0 c-2">
+        <div class="navbar">
+            <!-- Navbar icon-->
+            <label for="checkbox-input" class="navbar__icon">  
+              <img src="./images/icon-menu.svg" alt="">
+            </label>
+            <input type="checkbox" hidden class="navbar__checkbox" id="checkbox-input">
+            <!-- Overlay full -->
+            <label for="checkbox-input" class="navbar__overlay"></label>
+            <!-- Nav Menu -->
+            <div class="navbar__menu">
+                <label for="checkbox-input" class="navbar__close-btn">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+                </label>
+                <!-- List item  -->
+                <ul class="list">
+                  <li class="item">Colections</li>
+                  <li class="item">Men</li>
+                  <li class="item">Women</li>
+                  <li class="item">About</li>
+                  <li class="item">Contact</li>
+                </ul>
+            </div>
+        </div> 
+      
+      </div>
+      <div class="header-bar__logo col l-2 m-2 c-6">
+        <span>
+          sneakers
+        </span>
+      </div>
+      <div class="header-bar__menu col l-8 m-8 c-0">
+        <ul class="list">
+          <li class="item">Colections</li>
+          <li class="item">Men</li>
+          <li class="item">Women</li>
+          <li class="item">About</li>
+          <li class="item">Contact</li>
+        </ul>
+      </div>
+      <div class="header-bar__cart col l-1 m-1 c-2" >
+        <div class="cart-notice">
+          <span class="cart-notice__number">
+          </span>
+        </div>
+        <img class="cart-img cursor" onclick="cartOpenBtn()"  src="./images/icon-cart.svg" alt="">
+        <div class="cart-box disable">
+          <div class="cart-box__header">
+            <span>Cart</span>
+          </div>
+          <div class="cart-box__body--empty">
+            <span>Your cart is empty.</span>
+          </div>
+          <div class="cart-box__body--added disable">
+            <ul class="cart-box__list">
+              <li class="cart-box__item ">
+                <div class="cart-box__item--img">
+                  <img src="./images/image-product-1-thumbnail.jpg" alt="">
+                </div>
+                <div class="cart-box__item--status">
+                  <span class="name">
+                    Fall Limited Edition sneakers
+                  <p class="cart-box__item-price">
+                    <span class="cal"></span>
+                    <span class="sum"></span>
+                  </p>
+                
+                </div>
+                <button onclick="removeCart()">
+                  <img src="./images/icon-delete.svg" alt="">
+                </button>
+              </li>
+            </ul>
+            <div class="checkout-btn">
+              <span>Checkout</span>
+            </div>
+          </div>
+
+        </div>
+      </div>  
+      <div class="header-bar__avatar col l-1 m-1 c-2 cursor">
+        <img src="./images/image-avatar.png" alt="">
+      </div>
+    </header>
+    <section class="row content">
+      <div class="product-img col l-6 m-6 c-12">
+        <div class="main-img">
+          <div class="mobile-product__button--next cursor " onclick="backNextBtnMobile(1)" >
+            <i class="ti-angle-right"></i>
+          </div>
+          <div class="mobile-product__button--back cursor " onclick="backNextBtnMobile(-1)" >
+              <i class="ti-angle-left"></i>
+          </div>
+          <ul class="list">
+            <li class="item">
+              <img src="./images/image-product-1.jpg" onclick="clickFocus()" alt="">
+            </li>
+            <li class="item disable">
+              <img src="./images/image-product-2.jpg" onclick="clickFocus()" alt="">     
+            </li>
+            <li class="item disable">
+              <img src="./images/image-product-3.jpg" onclick="clickFocus()" alt="">
+            </li>
+            <li class="item disable">
+              <img src="./images/image-product-4.jpg" onclick="clickFocus()" alt="">
+            </li>
+          </ul>
+        </div>
+        <div class="extra-img">
+          <ul class="list">
+            <li class="item ">
+                <img class="img-choose" src="./images/image-product-1-thumbnail.jpg" onclick="clickOpen(0)" alt="">
+            </li>
+            <li class="item">
+                <img src="./images/image-product-2-thumbnail.jpg" onclick="clickOpen(1)" alt="">
+            </li>
+            <li class="item">
+                <img src="./images/image-product-3-thumbnail.jpg" onclick="clickOpen(2)" alt="">
+            </li>
+            <li class="item">
+                <img src="./images/image-product-4-thumbnail.jpg" onclick="clickOpen(3)" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="product-content col l-6 m-6 c-12">
+        <div class="company">
+          SNEAKER COPANY
+        </div>
+        <div class="name">
+          <span>Fall Limited Edition Sneakers</span>
+        </div>
+        <div class="status">
+          <span>
+            These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
+          </span>
+        </div>
+        <div class="price">
+          <div class="price-sale">$ 125.00</div>
+          <div class="sale">50%</div>
+        </div>
+        <div class="cost">
+          $250.00
+        </div>
+        <div class="container">
+          <div class="quantity">
+            <i onclick="clickMinus()" class="ti-minus"></i>
+            <span class="quantity-number">1</span>
+            <i onclick="clickAdd()" class="ti-plus"></i>
+          </div>
+          <button class="btn-addtocart" onclick="addCart(),addNoticeCart()">
+            <i class="ti-shopping-cart"></i>
+            <span> Add to cart</span>
+          </button>
+        </div>
+       
+      </div>
+      <div class="focus-product disable">
+        <div class="focus-client">
+        </div>
+        <div class="focus-product__img">
+          <div class="focus-product__img--main">
+            <ul class="list">
+              <li class="item">
+                <img src="./images/image-product-1.jpg"  class="disable" alt="">
+              </li>
+              <li class="item">
+                <img src="./images/image-product-2.jpg" class="disable" alt="">     
+              </li>
+              <li class="item">
+                <img src="./images/image-product-3.jpg" class="disable" alt="">
+              </li>
+              <li class="item">
+                <img src="./images/image-product-4.jpg" class="disable" alt="">
+              </li>
+            </ul>
+          </div>
+          <div class="focus-product__img--extra">
+            <ul class="list">
+              <li class="item ">
+                  <img src="./images/image-product-1-thumbnail.jpg" onclick="clickOpen(0)" alt="">
+              </li>
+              <li class="item">
+                  <img src="./images/image-product-2-thumbnail.jpg" onclick="clickOpen(1)" alt="">
+              </li>
+              <li class="item">
+                  <img src="./images/image-product-3-thumbnail.jpg" onclick="clickOpen(2)" alt="">
+              </li>
+              <li class="item">
+                  <img src="./images/image-product-4-thumbnail.jpg" onclick="clickOpen(3)" alt="">
+              </li>
+            </ul>
+          </div>
+         </div>
+         <div class="focus-product__button">
+           <div class="focus-product__button--next" onclick="backNextBtn(1)" >
+             <i class="ti-angle-right"  ></i>
+           </div>
+           <div class="focus-product__button--back" onclick="backNextBtn(-1)" >
+             <i class="ti-angle-left"  ></i>
+           </div>
+           <div class="focus-product__button--close" onclick="closeBtn()">
+             <i class="ti-close"></i>
+           </div>
+         </div>
+      </div>
+    </section>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      <br>
+      Coded by <a href="#">Hanamichi Kuro</a>.
+      
+    </div>
+    <script src="./asset/js/app.js"></script>
+
+  </div>
+  
+</body>
+</html>
